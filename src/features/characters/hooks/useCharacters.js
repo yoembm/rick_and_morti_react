@@ -19,7 +19,12 @@ export function useCharacters(initialUrl) {
         .finally(() => setLoading(false));
     }, [url]);
 
+
     
+    const goToUrl = (newUrl) => {
+        setUrl(newUrl);
+    }
+
      const nextPage = () => {
         if (info?.next) {
             setUrl(info.next);
@@ -39,7 +44,8 @@ export function useCharacters(initialUrl) {
         error,
         info,
         nextPage,
-        previousPage
+        previousPage,
+        goToUrl
     }
 
 }

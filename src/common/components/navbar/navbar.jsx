@@ -9,7 +9,7 @@ export function Navbar() {
         <div>
             <nav className={style.container}>
                 <Link to="/">All Characters</Link>
-                <Link to="/search">Character Search</Link>
+                <Link to="/locations">Character Search</Link>
             </nav>
         </div>
     );

@@ -1,13 +1,14 @@
 .container {
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
     padding: 20px;
 
 }
 
 .characterCard {
+    width: 250px;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
@@ -39,4 +40,19 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+}
+
+.searcher {
+
+    padding: 20px;
+
+
+}
+
+input {
+    width: 250px;
+    height: 28px;
+    margin-right: 10px;
+    border: none;
+    background-color: rgb(240, 229, 229);
 }

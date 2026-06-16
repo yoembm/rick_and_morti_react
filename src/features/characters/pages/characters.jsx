@@ -2,12 +2,22 @@ import { Link, Navigate, useNavigate } from "react-router";
 import { useCharacters } from "../hooks/useCharacters";
 
 import style from './characters.module.css';
+import { useState } from "react";
 
 export function CharactersPage() {
 
     const initialUrl = 'https://rickandmortyapi.com/api/character';
 
-    const { characters, info, loading, error, nextPage, previousPage } = useCharacters(initialUrl);
+    const { characters, info, loading, error, nextPage, previousPage, goToUrl } = useCharacters(initialUrl);
+
+    const [name, setName] = useState("");
+
+    const searchCharacter = () => {
+        const url =
+            `https://rickandmortyapi.com/api/character/?name=${encodeURIComponent(name)}`;
+
+        goToUrl(url);
+    };
 
 
     if (loading) {
@@ -20,6 +30,17 @@ export function CharactersPage() {
         <div>
 
             <h1>Rick and Morty Characters</h1>
+
+            <div className={style.searcher}>
+                <input type="text"
+                placeholder="Character name"
+                value={name}
+                onChange={(e)=> setName(e.target.value)}
+                />
+                <button
+                onClick={searchCharacter}
+                >Search</button>
+            </div>
             <div className={style.pagination}>
                 <button
                     onClick={previousPage}
