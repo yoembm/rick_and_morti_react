@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import { ShopLayout } from "../common/layout/shopLayout";
 import { Characters } from "../app/characters/characters";
+import { CharacterDetail } from "../app/characters/characterDetail";
 
 export const router = createBrowserRouter([
     {
@@ -10,6 +11,10 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 Component: Characters,
+            },
+            {
+                path: "/detail/:id",
+                Component: CharacterDetail
             }
         ]
     }

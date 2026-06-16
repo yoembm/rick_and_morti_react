@@ -4,18 +4,21 @@ import style from './characters.module.css';
 
 export function CharactersPage() {
 
+    const initialUrl = 'https://rickandmortyapi.com/api/character';
 
-    const { characters, loading, error } = useCharacters();
-
-    console.log(characters);
-
+    const { characters, info, loading, error, nextPage, previousPage } = useCharacters(initialUrl);
+    
     return (
         <div>
             
             <h1>Rick and Morty Characters</h1>
             <div className={style.pagination}>
-                <button>Previous</button>
-                <button>Next</button>
+                <button 
+                onClick={previousPage} 
+                
+
+                >Previous</button>
+                <button onClick={nextPage} >Next</button>
             </div>
             <div className={style.container}> 
 
