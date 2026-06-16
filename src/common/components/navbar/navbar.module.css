@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    width: 220px;
+    height: 100vh;
+
+    background-color: #1f2937;
+
+
+}
+
+.container a {
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 16px;
+    border-radius: 8px;
+
+    transition: background-color 0.2s ease;
+}
+
+.container a:hover {
+    background-color: #374151;
+}
+
+.container a:active {
+    background-color: #4b5563;
+}
