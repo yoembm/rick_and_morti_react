@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
                 Component: Characters,
             },
             {
-                path: "/detail/:id",
+                path: "/character/:id",
                 Component: CharacterDetail
             }
         ]
