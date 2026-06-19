@@ -33,12 +33,12 @@ export function CharactersPage() {
 
             <div className={style.searcher}>
                 <input type="text"
-                placeholder="Character name"
-                value={name}
-                onChange={(e)=> setName(e.target.value)}
+                    placeholder="Character name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                 />
                 <button
-                onClick={searchCharacter}
+                    onClick={searchCharacter}
                 >Search</button>
             </div>
             <div className={style.pagination}>
@@ -52,10 +52,14 @@ export function CharactersPage() {
             <div className={style.container}>
                 {characters.map(character => (
 
-                    <Link key={character.id}
+                    <Link
+                        key={character.id}
+                        className={style.characterLink}
                         to={`/character/${character.id}`}
                     >
+
                         <div className={style.characterCard} >
+
                             <h3>{character.name}</h3>
                             <p>Status: {character.status}</p>
                             <p>Species: {character.species}</p>

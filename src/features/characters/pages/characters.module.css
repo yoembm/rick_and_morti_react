@@ -8,6 +8,7 @@
 }
 
 .characterCard {
+
     width: 250px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -19,10 +20,25 @@
     transition: transform 0.2s;
 }
 
+.characterLink {
+    text-decoration: none;
+    color: rgb(3, 97, 141);
+}
+
+
+.characterLink:hover {    
+    color: white;    
+}
+
 .characterCard img {
     width: 100%;
     border-radius: 8px;
 }
+
+.characterCard:hover {
+    background-color: rgb(3, 97, 141);;
+}
+
 
 .pagination {
     display: flex;

@@ -11,6 +11,7 @@ export function ShopLayout() {
         <div className={style.container}>
             <div className={style.header}>
                 <h1>Rick and Morty API</h1>
+                <p>Presentado por: Yoel Briceño Mallma</p>
             </div>
 
             <div className={style.shopLayout}>
